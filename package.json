@@ -1,8 +1,8 @@
 {
-  "name": "my-fullstack-collection",
-  "version": "0.1.0",
-  "description": "Todo Full Stack",
-  "repository": "https://https://github.com/dev-academy-challenges/todo-full-stack",
+  "name": "Katas",
+  "version": "1.0.0",
+  "description": "Repo to practice katas and excercises",
+  "repository": "https://github.com/gisaacsotelo/Katas",
   "main": "server/index.js",
   "scripts": {
     "build": "run-p build:client build:server",
@@ -19,10 +19,12 @@
     "lint": "eslint --ext .js,.jsx ."
   },
   "keywords": [
-    "fullstack"
+    "fullstack",
+    "katas",
+    "kung-fu"
   ],
-  "author": "EDA",
-  "license": "ISC",
+  "author": "Isaac Sotelo",
+  "license": "MIT",
   "babel": {
     "presets": [
       "@babel/preset-typescript",
@@ -31,7 +33,6 @@
     ]
   },
   "eslintConfig": {
-    "extends": "eda/react",
     "ignorePatterns": [
       "bundle.js"
     ]
