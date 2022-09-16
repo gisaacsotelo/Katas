@@ -1,30 +1,26 @@
-/* eslint-env es6 */
-/* eslint-disable no-console */
-const path = require('path')
+import { join } from 'path'
 
-module.exports = {
-  // entry: ['./client/index.js', './client/styles/index.scss'],
-  entry: ['./client/index.js'],
-  output: {
-    path: path.join(__dirname, '..', 'server', 'public'),
-    filename: 'bundle.js',
-  },
-  mode: 'development',
-  module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.mp3$/,
-        loader: 'file-loader',
-      },
-    ],
-  },
-  resolve: {
-    extensions: ['.js', '.jsx'],
-  },
-  devtool: 'source-map',
+export const entry = ['./client/index.js']
+export const output = {
+  // eslint-disable-next-line no-undef
+  path: join(__dirname, '..', 'server', 'public'),
+  filename: 'bundle.js',
 }
+export const mode = 'development'
+export const module = {
+  rules: [
+    {
+      test: /\.jsx?$/,
+      loader: 'babel-loader',
+      exclude: /node_modules/,
+    },
+    {
+      test: /\.mp3$/,
+      loader: 'file-loader',
+    },
+  ],
+}
+export const resolve = {
+  extensions: ['.js', '.jsx'],
+}
+export const devtool = 'source-map'
